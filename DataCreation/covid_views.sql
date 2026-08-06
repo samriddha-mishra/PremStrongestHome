@@ -1,0 +1,193 @@
+/* ============================================================
+   Script Name : covid_views.sql
+   Description : Creates sub-views to check how much not having a full crowd (due to COVID) affected the stats
+   Author      : Samriddha Mishra
+   Created     : 2026-08-06
+   Modified    : 
+   Notes       : Make the views first, otherwise these will be invalid
+   ============================================================ */
+
+CREATE VIEW ArsenalCOVIDMatches AS
+SELECT * FROM ArsenalMatchStats
+WHERE Date BETWEEN '2020-06-17' AND '2021-06-01';
+GO
+CREATE VIEW AstonVillaCOVIDMatches AS
+SELECT * FROM AstonVillaMatchStats
+WHERE Date BETWEEN '2020-06-17' AND '2021-06-01';
+GO
+CREATE VIEW BirminghamCOVIDMatches AS
+SELECT * FROM BirminghamMatchStats
+WHERE Date BETWEEN '2020-06-17' AND '2021-06-01';
+GO
+CREATE VIEW BlackburnCOVIDMatches AS
+SELECT * FROM BlackburnMatchStats
+WHERE Date BETWEEN '2020-06-17' AND '2021-06-01';
+GO
+CREATE VIEW BlackpoolCOVIDMatches AS
+SELECT * FROM BlackpoolMatchStats
+WHERE Date BETWEEN '2020-06-17' AND '2021-06-01';
+GO
+CREATE VIEW BoltonCOVIDMatches AS
+SELECT * FROM BoltonMatchStats
+WHERE Date BETWEEN '2020-06-17' AND '2021-06-01';
+GO
+CREATE VIEW BournemouthCOVIDMatches AS
+SELECT * FROM BournemouthMatchStats
+WHERE Date BETWEEN '2020-06-17' AND '2021-06-01';
+GO
+CREATE VIEW BradfordCOVIDMatches AS
+SELECT * FROM BradfordMatchStats
+WHERE Date BETWEEN '2020-06-17' AND '2021-06-01';
+GO
+CREATE VIEW BrentfordCOVIDMatches AS
+SELECT * FROM BrentfordMatchStats
+WHERE Date BETWEEN '2020-06-17' AND '2021-06-01';
+GO
+CREATE VIEW BrightonCOVIDMatches AS
+SELECT * FROM BrightonMatchStats
+WHERE Date BETWEEN '2020-06-17' AND '2021-06-01';
+GO
+CREATE VIEW BurnleyCOVIDMatches AS
+SELECT * FROM BurnleyMatchStats
+WHERE Date BETWEEN '2020-06-17' AND '2021-06-01';
+GO
+CREATE VIEW CardiffCOVIDMatches AS
+SELECT * FROM CardiffMatchStats
+WHERE Date BETWEEN '2020-06-17' AND '2021-06-01';
+GO
+CREATE VIEW CharltonCOVIDMatches AS
+SELECT * FROM CharltonMatchStats
+WHERE Date BETWEEN '2020-06-17' AND '2021-06-01';
+GO
+CREATE VIEW ChelseaCOVIDMatches AS
+SELECT * FROM ChelseaMatchStats
+WHERE Date BETWEEN '2020-06-17' AND '2021-06-01';
+GO
+CREATE VIEW CoventryCOVIDMatches AS
+SELECT * FROM CoventryMatchStats
+WHERE Date BETWEEN '2020-06-17' AND '2021-06-01';
+GO
+CREATE VIEW CrystalPalaceCOVIDMatches AS
+SELECT * FROM CrystalPalaceMatchStats
+WHERE Date BETWEEN '2020-06-17' AND '2021-06-01';
+GO
+CREATE VIEW DerbyCOVIDMatches AS
+SELECT * FROM DerbyMatchStats
+WHERE Date BETWEEN '2020-06-17' AND '2021-06-01';
+GO
+CREATE VIEW EvertonCOVIDMatches AS
+SELECT * FROM EvertonMatchStats
+WHERE Date BETWEEN '2020-06-17' AND '2021-06-01';
+GO
+CREATE VIEW FulhamCOVIDMatches AS
+SELECT * FROM FulhamMatchStats
+WHERE Date BETWEEN '2020-06-17' AND '2021-06-01';
+GO
+CREATE VIEW HuddersfieldCOVIDMatches AS
+SELECT * FROM HuddersfieldMatchStats
+WHERE Date BETWEEN '2020-06-17' AND '2021-06-01';
+GO
+CREATE VIEW HullCOVIDMatches AS
+SELECT * FROM HullMatchStats
+WHERE Date BETWEEN '2020-06-17' AND '2021-06-01';
+GO
+CREATE VIEW IpswichCOVIDMatches AS
+SELECT * FROM IpswichMatchStats
+WHERE Date BETWEEN '2020-06-17' AND '2021-06-01';
+GO
+CREATE VIEW LeedsCOVIDMatches AS
+SELECT * FROM LeedsMatchStats
+WHERE Date BETWEEN '2020-06-17' AND '2021-06-01';
+GO
+CREATE VIEW LeicesterCOVIDMatches AS
+SELECT * FROM LeicesterMatchStats
+WHERE Date BETWEEN '2020-06-17' AND '2021-06-01';
+GO
+CREATE VIEW LiverpoolCOVIDMatches AS
+SELECT * FROM LiverpoolMatchStats
+WHERE Date BETWEEN '2020-06-17' AND '2021-06-01';
+GO
+CREATE VIEW LutonCOVIDMatches AS
+SELECT * FROM LutonMatchStats
+WHERE Date BETWEEN '2020-06-17' AND '2021-06-01';
+GO
+CREATE VIEW ManCityCOVIDMatches AS
+SELECT * FROM ManCityMatchStats
+WHERE Date BETWEEN '2020-06-17' AND '2021-06-01';
+GO
+CREATE VIEW ManUnitedCOVIDMatches AS
+SELECT * FROM ManUnitedMatchStats
+WHERE Date BETWEEN '2020-06-17' AND '2021-06-01';
+GO
+CREATE VIEW MiddlesbroughCOVIDMatches AS
+SELECT * FROM MiddlesbroughMatchStats
+WHERE Date BETWEEN '2020-06-17' AND '2021-06-01';
+GO
+CREATE VIEW NewcastleCOVIDMatches AS
+SELECT * FROM NewcastlematchStats
+WHERE Date BETWEEN '2020-06-17' AND '2021-06-01';
+GO
+CREATE VIEW NorwichCOVIDMatches AS
+SELECT * FROM NorwichMatchStats
+WHERE Date BETWEEN '2020-06-17' AND '2021-06-01';
+GO
+CREATE VIEW NottinghamForestCOVIDMatches AS
+SELECT * FROM NottinghamForestMatchStats
+WHERE Date BETWEEN '2020-06-17' AND '2021-06-01';
+GO
+CREATE VIEW PortsmouthCOVIDMatches AS
+SELECT * FROM PortsmouthMatchStats
+WHERE Date BETWEEN '2020-06-17' AND '2021-06-01';
+GO
+CREATE VIEW QPRCOVIDMatches AS
+SELECT * FROM QPRMatchStats
+WHERE Date BETWEEN '2020-06-17' AND '2021-06-01';
+GO
+CREATE VIEW ReadingCOVIDMatches AS
+SELECT * FROM ReadingMatchStats
+WHERE Date BETWEEN '2020-06-17' AND '2021-06-01';
+GO
+CREATE VIEW SheffieldUtdCOVIDMatches AS
+SELECT * FROM SheffieldUtdMatchStats
+WHERE Date BETWEEN '2020-06-17' AND '2021-06-01';
+GO
+CREATE VIEW SouthamptonCOVIDMatches AS
+SELECT * FROM SouthamptonMatchStats
+WHERE Date BETWEEN '2020-06-17' AND '2021-06-01';
+GO
+CREATE VIEW StokeCOVIDMatches AS
+SELECT * FROM StokeMatchStats
+WHERE Date BETWEEN '2020-06-17' AND '2021-06-01';
+GO
+CREATE VIEW SunderlandCOVIDMatches AS
+SELECT * FROM SunderlandMatchStats
+WHERE Date BETWEEN '2020-06-17' AND '2021-06-01';
+GO
+CREATE VIEW SwanseaCOVIDMatches AS
+SELECT * FROM SwanseaMatchStats
+WHERE Date BETWEEN '2020-06-17' AND '2021-06-01';
+GO
+CREATE VIEW TottenhamCOVIDMatches AS
+SELECT * FROM TottenhamMatchStats
+WHERE Date BETWEEN '2020-06-17' AND '2021-06-01';
+GO
+CREATE VIEW WatfordCOVIDMatches AS
+SELECT * FROM WatfordMatchStats
+WHERE Date BETWEEN '2020-06-17' AND '2021-06-01';
+GO
+CREATE VIEW WestBromCOVIDMatches AS
+SELECT * FROM WestBromMatchStats
+WHERE Date BETWEEN '2020-06-17' AND '2021-06-01';
+GO
+CREATE VIEW WestHamCOVIDMatches AS
+SELECT * FROM WestHamMatchStats
+WHERE Date BETWEEN '2020-06-17' AND '2021-06-01';
+GO
+CREATE VIEW WiganCOVIDMatches AS
+SELECT * FROM WiganMatchStats
+WHERE Date BETWEEN '2020-06-17' AND '2021-06-01';
+GO
+CREATE VIEW WolvesCOVIDMatches AS
+SELECT * FROM WolvesMatchStats
+WHERE Date BETWEEN '2020-06-17' AND '2021-06-01';
+GO
