@@ -1,6 +1,6 @@
 /* ============================================================
    Script Name : quality_tests.sql
-   Description : ensures data is clean and accurate, matching historical records
+   Description : ensures data is clean and accurate, matching historical records. also fixes a apostrophe error
    Author      : Samriddha Mishra
    Created     : 2026-07-23
    Modified    : 
@@ -62,3 +62,7 @@ WHERE HTResult != TRIM(HTResult);
 
 SELECT * FROM AllMatches
 WHERE Referee != TRIM(Referee);
+
+UPDATE AllMatches
+SET HomeTeam = 'Nottingham Forest', AwayTeam = 'Nottingham Forest'
+WHERE SUBSTRING(HomeTeam, 1, 4) = 'Nott' OR SUBSTRING(AwayTeam, 1, 4) = 'Nott'; 
