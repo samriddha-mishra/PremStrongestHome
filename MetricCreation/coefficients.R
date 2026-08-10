@@ -21,6 +21,8 @@ Type 'q()' to quit R.
 
 [Workspace restored from /Users/samriddhamishra/.RData]
 [History restored from /Users/samriddhamishra/.Rapp.history]
+#' @title Coefficients
+#' @description Finds the coefficients which will be useds to create the performance score for the teams
 
 > homeZScores <- read.csv("/Users/samriddhamishra/Downloads/HomeZScores.csv")
 > awayZScores <- read.csv("/Users/samriddhamishra/Downloads/AwayZScores.csv")
@@ -37,7 +39,6 @@ Type 'q()' to quit R.
 > homePoints <- homeZScores$PointIndicator
 > homeGoalsScored_ZScore <- homeZScores$GoalsScored_ZScore
 > homeConcededScored_ZScore <- homeZScores$GoalsConceded_ZScore
-> 
 > homeShotsOnTarget_ZScore <- homeZScores$ShotsOnTarget_ZScore
 > homeFouls_ZScore <- homeZScores$Fouls_ZScore 
 > homeCorners_ZScore <- homeZScores$Corners_ZScore
