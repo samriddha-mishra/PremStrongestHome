@@ -22,8 +22,6 @@ Type 'q()' to quit R.
 [Workspace restored from /Users/samriddhamishra/.RData]
 [History restored from /Users/samriddhamishra/.Rapp.history]
 
-> library(tidyverse)
-Error in library(tidyverse) : there is no package called ‘tidyverse’
 > NonCOVIDMetrics = read.csv("/Users/samriddhamishra/Downloads/NonCOVIDMetrics.csv")
 > COVIDMetrics = read.csv("/Users/samriddhamishra/Downloads/COVIDMetrics.csv")
 > 
@@ -35,9 +33,6 @@ Error in library(tidyverse) : there is no package called ‘tidyverse’
 [29] "Southampton"              "Huddersfield Town"        "Bournemouth"              "Reading"                  "West Bromwich and Albion" "Brentford"                "Watford"                 
 [36] "Wigan Athletic"           "Leeds United"             "Wolverhampton Wanderers"  "Burnley"                  "Leicester City"           "Coventry City"            "Brighton and Hove Albion"
 [43] "Crystal Palace"           "Blackpool"                "Cardiff City"             "Ipswich Town"            
-> NonCOVIDMetrics <- NonCOVIDMetrics %>% mutate(team_logos = paste0("/Users/samriddhamishra/Downloads/", str_remove_all(TeamName, " "), ".png"))
-Error in NonCOVIDMetrics %>% mutate(team_logos = paste0("/Users/samriddhamishra/Downloads/",  : 
-  could not find function "%>%"
 > install.packages("tidyverse")
 --- Please select a CRAN mirror for use in this session ---
 also installing the dependencies ‘rematch’, ‘data.table’, ‘gargle’, ‘uuid’, ‘cellranger’, ‘ids’, ‘rematch2’, ‘systemfonts’, ‘cpp11’, ‘conflicted’, ‘dbplyr’, ‘dtplyr’, ‘forcats’, ‘googledrive’, ‘googlesheets4’, ‘haven’, ‘ragg’, ‘readxl’, ‘reprex’
@@ -78,8 +73,6 @@ The downloaded binary packages are in
 ℹ Use the conflicted package (<http://conflicted.r-lib.org/>) to force all conflicts to become errors
 > NonCOVIDMetrics <- NonCOVIDMetrics %>% mutate(team_logos = paste0("/Users/samriddhamishra/Downloads/", str_remove_all(TeamName, " "), ".png"))
 > COVIDMetrics <- COVIDMetrics %>% mutate(team_logos = paste0("/Users/samriddhamishra/Downloads/", str_remove_all(TeamName, " "), ".png"))
-> write_csv(NonCOVIDMetrics, "/Users/samriddhamishra/Downloads/NonCOVIDMetrics.csv")
-                                                                                                                                                                                                                        
+> write_csv(NonCOVIDMetrics, "/Users/samriddhamishra/Downloads/NonCOVIDMetrics.csv")                                                                                                                                                                                                                      
 > write_csv(COVIDMetrics, "/Users/samriddhamishra/Downloads/COVIDMetrics.csv")
                                                                                                                                                                                                                         
-> 
