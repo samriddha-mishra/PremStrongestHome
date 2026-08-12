@@ -12,5 +12,5 @@ In the COVID only window, the results obviously got a lot more variable. Since t
 
 # Summary
 
-Strongest home team in 25 year window: Stoke City with 0.692 rating over 10 years\
-Strongest COVID home team: Sheffield United
+Strongest home team in 25 year window: Stoke City with 0.692 HFA rating over 10 years\
+Strongest COVID home team: Sheffield United with 0.726 HFA rating
