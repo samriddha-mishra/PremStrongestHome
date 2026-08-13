@@ -51,12 +51,6 @@ Type 'q()' to quit R.
 ✖ dplyr::filter() masks stats::filter()
 ✖ dplyr::lag()    masks stats::lag()
 ℹ Use the conflicted package (<http://conflicted.r-lib.org/>) to force all conflicts to become errors
-> library(gt)
-Error in library(gt) : there is no package called ‘gt’
-> library(gtExtras)
-Error in library(gtExtras) : there is no package called ‘gtExtras’
-> install.packages(gt)
-Error: object 'gt' not found
 > install.packages("gt")
 --- Please select a CRAN mirror for use in this session ---
 also installing the dependencies ‘V8’, ‘litedown’, ‘reactR’, ‘bigD’, ‘bitops’, ‘juicyjuice’, ‘markdown’, ‘reactable’
@@ -84,49 +78,6 @@ The downloaded binary packages are in
 	/var/folders/2c/_4nlrgh57m322msd_bkchlr00000gn/T//RtmpSsz8ai/downloaded_packages
 > library(gt)
 > library(gtExtras)
-> NonCOVIDMetrics %>% mutate(
-+     FullTeam = paste0(
-+       '<img src="', team_logos, '" height="28" style="vertical-align:middle; margin-right:8px;"> ',
-+       '<strong>', TeamName, '</strong>'
-+     )
-+   ) %>% select(
-+     FullTeam, 
-+     HomeFieldRating, 
-+     AwayFieldRating, 
-+     HomeFieldAdvantageRating
-+   ) %>% gt() %>% fmt_markdown(columns = FullTeam) %>% cols_label(
-+     HomeFieldRating = "Home Rating",
-+     AwayFieldRating = "Away Rating",
-+     HomeFieldAdvantageRating = "Advantage Rating"
-+   ) %>% cols_align(
-+     align = "center",
-+     columns = c(HomeFieldRating, AwayFieldRating, HomeFieldAdvantageRating)
-+   ) %>% gt_theme_espn()
-> NonCOVIDMetrics %>% mutate(
-+     FullTeam = paste0(
-+        '<img src="file://', team_logos, '" height="28" style="vertical-align:middle; margin-right:8px;"> ',
-+        '<strong>', TeamName, '</strong>'
-+      )
-+    ) %>% select(
-+      FullTeam, 
-+      HomeFieldRating, 
-+     AwayFieldRating, 
-+     HomeFieldAdvantageRating
-+    ) %>% gt() %>% fmt_markdown(columns = FullTeam) %>% cols_label(
-+     HomeFieldRating = "Home Rating",
-+     AwayFieldRating = "Away Rating",
-+      HomeFieldAdvantageRating = "Advantage Rating"
-+    ) %>% cols_align(
-+     align = "center",
-+      columns = c(HomeFieldRating, AwayFieldRating, HomeFieldAdvantageRating)
-+    ) %>% gt_theme_espn()
-> install.packages("knittr")
-Warning message:
-package ‘knittr’ is not available for this version of R
-
-A version of this package for your version of R might be available elsewhere,
-see the ideas at
-https://cran.r-project.org/doc/manuals/r-patched/R-admin.html#Installing-packages 
 > install.packages("knitr")
 trying URL 'https://ftp.osuosl.org/pub/cran/bin/macosx/big-sur-arm64/contrib/4.5/knitr_1.51.tgz'
 Content type 'application/x-gzip' length 1063013 bytes (1.0 MB)
@@ -136,147 +87,66 @@ downloaded 1.0 MB
 
 The downloaded binary packages are in
 	/var/folders/2c/_4nlrgh57m322msd_bkchlr00000gn/T//RtmpSsz8ai/downloaded_packages
->  NonCOVIDMetrics %>% mutate(
-+      FullTeam = paste0(
-+        '<img src="', image_uri(team_logos), '" height="28" style="vertical-align:middle; margin-right:8px;"> ',
-+         '<strong>', TeamName, '</strong>'
-+       )
-+     ) %>% select(
-+       FullTeam, 
-+       HomeFieldRating, 
-+      AwayFieldRating, 
-+      HomeFieldAdvantageRating
-+     ) %>% gt() %>% fmt_markdown(columns = FullTeam) %>% cols_label(
-+      HomeFieldRating = "Home Rating",
-+      AwayFieldRating = "Away Rating",
-+      HomeFieldAdvantageRating = "Advantage Rating"
-+    ) %>% cols_align(
-+      align = "center",
-+      columns = c(HomeFieldRating, AwayFieldRating, HomeFieldAdvantageRating)
-+    ) %>% gt_theme_espn()
-Error in `mutate()`:
-ℹ In argument: `FullTeam = paste0(...)`.
-Caused by error in `image_uri()`:
-! could not find function "image_uri"
-Run `rlang::last_trace()` to see where the error occurred.
-> 
 > library(knitr)
-> NonCOVIDMetrics %>% mutate(
-+      FullTeam = paste0(
-+        '<img src="', image_uri(team_logos), '" height="28" style="vertical-align:middle; margin-right:8px;"> ',
-+          '<strong>', TeamName, '</strong>'
-+        )
-+      ) %>% select(
-+        FullTeam, 
-+        HomeFieldRating, 
-+       AwayFieldRating, 
-+       HomeFieldAdvantageRating
-+      ) %>% gt() %>% fmt_markdown(columns = FullTeam) %>% cols_label(
-+      HomeFieldRating = "Home Rating",
-+       AwayFieldRating = "Away Rating",
-+       HomeFieldAdvantageRating = "Advantage Rating"
-+     ) %>% cols_align(
-+       align = "center",
-+       columns = c(HomeFieldRating, AwayFieldRating, HomeFieldAdvantageRating)
-+     ) %>% gt_theme_espn()
-Error in `mutate()`:
-ℹ In argument: `FullTeam = paste0(...)`.
-Caused by error in `file()`:
-! invalid 'description' argument
-Run `rlang::last_trace()` to see where the error occurred.
+
 > NonCOVIDMetrics %>% 
-+   mutate(
-+     FullTeam = paste0(
-+       '<img src="', image_uri(team_logos), '" height="28" style="vertical-align:middle; margin-right:8px;"> ',
-+       '<strong>', TeamName, '</strong>'
-+     )
-+   ) %>% 
-+   select(
-+     FullTeam, 
-+     HomeFieldRating, 
-+     AwayFieldRating, 
-+     HomeFieldAdvantageRating
-+   ) %>% 
-+   gt() %>% 
-+   fmt_markdown(columns = FullTeam) %>% 
-+   fmt_number(
-+     columns = c(HomeFieldRating, AwayFieldRating, HomeFieldAdvantageRating),
-+     decimals = 3
-+   ) %>% 
-+   cols_label(
-+     FullTeam = "Team",
-+     HomeFieldRating = "Home Rating",
-+     AwayFieldRating = "Away Rating",
-+     HomeFieldAdvantageRating = "Advantage Rating"
-+   ) %>% 
-+   cols_align(
-+     align = "center",
-+     columns = c(HomeFieldRating, AwayFieldRating, HomeFieldAdvantageRating)
-+   ) %>% 
-+   gt_theme_espn()
-Error in `mutate()`:
-ℹ In argument: `FullTeam = paste0(...)`.
-Caused by error in `file()`:
-! invalid 'description' argument
-Run `rlang::last_trace()` to see where the error occurred.
-> NonCOVIDMetrics %>% 
-+   mutate(
-+     FullTeam = paste0(
-+       '<img src="', sapply(team_logos, image_uri), '" height="28" style="vertical-align:middle; margin-right:8px;"> ',
-+       '<strong>', TeamName, '</strong>'
-+     )
-+   ) %>% 
-+   select(
-+     FullTeam, 
-+     HomeFieldRating, 
-+     AwayFieldRating, 
-+     HomeFieldAdvantageRating
-+   ) %>% 
-+   gt() %>% 
-+   fmt_markdown(columns = FullTeam) %>% 
-+   fmt_number(
-+     columns = c(HomeFieldRating, AwayFieldRating, HomeFieldAdvantageRating),
-+     decimals = 3
-+   ) %>% 
-+   cols_label(
-+     FullTeam = "Team",
-+     HomeFieldRating = "Home Rating",
-+     AwayFieldRating = "Away Rating",
-+     HomeFieldAdvantageRating = "Advantage Rating"
-+   ) %>% 
-+   cols_align(
-+     align = "center",
-+     columns = c(HomeFieldRating, AwayFieldRating, HomeFieldAdvantageRating)
-+   ) %>% 
-+   gt_theme_espn()
+   mutate(
+     FullTeam = paste0(
+       '<img src="', sapply(team_logos, image_uri), '" height="28" style="vertical-align:middle; margin-right:8px;"> ',
+       '<strong>', TeamName, '</strong>'
+     )
+   ) %>% 
+   select(
+     FullTeam, 
+     HomeFieldRating, 
+     AwayFieldRating, 
+     HomeFieldAdvantageRating
+   ) %>% 
+   gt() %>% 
+   fmt_markdown(columns = FullTeam) %>% 
+   fmt_number(
+     columns = c(HomeFieldRating, AwayFieldRating, HomeFieldAdvantageRating),
+     decimals = 3
+   ) %>% 
+   cols_label(
+     FullTeam = "Team",
+     HomeFieldRating = "Home Rating",
+     AwayFieldRating = "Away Rating",
+     HomeFieldAdvantageRating = "Advantage Rating"
+   ) %>% 
+  cols_align(
+     align = "center",
+     columns = c(HomeFieldRating, AwayFieldRating, HomeFieldAdvantageRating)
+   ) %>% 
+   gt_theme_espn()
 > COVIDMetrics %>% 
-+    mutate(
-+      FullTeam = paste0(
-+       '<img src="', sapply(team_logos, image_uri), '" height="28" style="vertical-align:middle; margin-right:8px;"> ',
-+       '<strong>', TeamName, '</strong>'
-+      )
-+    ) %>% 
-+    select(
-+     FullTeam, 
-+     HomeFieldRating, 
-+     AwayFieldRating, 
-+      HomeFieldAdvantageRating
-+    ) %>% 
-+    gt() %>% 
-+    fmt_markdown(columns = FullTeam) %>% 
-+    fmt_number(
-+     columns = c(HomeFieldRating, AwayFieldRating, HomeFieldAdvantageRating),
-+      decimals = 3
-+    ) %>% 
-+    cols_label(
-+      FullTeam = "Team",
-+      HomeFieldRating = "Home Rating",
-+     AwayFieldRating = "Away Rating",
-+     HomeFieldAdvantageRating = "Advantage Rating"
-+    ) %>% 
-+   cols_align(
-+      align = "center",
-+      columns = c(HomeFieldRating, AwayFieldRating, HomeFieldAdvantageRating)
-+    ) %>% 
-+    gt_theme_espn()
-> 
+    mutate(
+      FullTeam = paste0(
+       '<img src="', sapply(team_logos, image_uri), '" height="28" style="vertical-align:middle; margin-right:8px;"> ',
+       '<strong>', TeamName, '</strong>'
+      )
+    ) %>% 
+    select(
+     FullTeam, 
+     HomeFieldRating, 
+     AwayFieldRating, 
+      HomeFieldAdvantageRating
+    ) %>% 
+    gt() %>% 
+    fmt_markdown(columns = FullTeam) %>% 
+    fmt_number(
+     columns = c(HomeFieldRating, AwayFieldRating, HomeFieldAdvantageRating),
+      decimals = 3
+    ) %>% 
+    cols_label(
+      FullTeam = "Team",
+      HomeFieldRating = "Home Rating",
+     AwayFieldRating = "Away Rating",
+     HomeFieldAdvantageRating = "Advantage Rating"
+    ) %>% 
+   cols_align(
+      align = "center",
+      columns = c(HomeFieldRating, AwayFieldRating, HomeFieldAdvantageRating)
+    ) %>% 
+    gt_theme_espn()
+ 
